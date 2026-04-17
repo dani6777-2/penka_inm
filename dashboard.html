@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - PNK Inmobiliaria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h2>PNK Inmobiliaria</h2>
+    </div>
+    <nav aria-label="Navegación usuario">
+      <ul>
+        <li><a href="index.html">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <h3>Menú</h3>
+        <nav aria-label="Navegación Dashboard">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
+            <li><a href="dashboard.html" style="font-weight: bold; color: var(--primary-color);">Resumen</a></li>
+            <li><a href="registro-propiedades.html">Registro de Propiedades</a></li>
+            <li><a href="gestion-usuarios.html">Gestión de Usuarios</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="dashboard-content">
+        <h2>Bienvenido al panel general</h2>
+        
+        <div class="grid grid--3-cols" style="margin-top: 2rem;">
+          <article class="card" style="text-align: center; border-top: 4px solid var(--secondary-color);">
+            <h3 style="font-size: 2.5rem; margin-bottom: 0;">150</h3>
+            <p style="color: var(--text-secondary);">Propiedades Activas</p>
+          </article>
+          
+          <article class="card" style="text-align: center; border-top: 4px solid var(--accent-color);">
+            <h3 style="font-size: 2.5rem; margin-bottom: 0;">45</h3>
+            <p style="color: var(--text-secondary);">Gestores</p>
+          </article>
+          
+          <article class="card" style="text-align: center; border-top: 4px solid var(--primary-color);">
+            <h3 style="font-size: 2.5rem; margin-bottom: 0;">320</h3>
+            <p style="color: var(--text-secondary);">Propietarios</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

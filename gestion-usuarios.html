@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Usuarios - PNK Inmobiliaria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h2>PNK Inmobiliaria</h2>
+    </div>
+    <nav aria-label="Navegación superior">
+      <ul>
+        <li><a href="dashboard.html">Volver al Dashboard</a></li>
+        <li><a href="index.html">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <h3>Menú</h3>
+        <nav aria-label="Navegación Dashboard">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
+            <li><a href="dashboard.html">Resumen</a></li>
+            <li><a href="registro-propiedades.html">Registro de Propiedades</a></li>
+            <li><a href="gestion-usuarios.html" style="font-weight: bold; color: var(--primary-color);">Gestión de Usuarios</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="dashboard-content">
+        <h2>Gestión de Usuarios Activos</h2>
+        
+        <div class="table-container" style="margin-top: 1rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>RUT</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>11.222.333-4</td>
+                <td>Maria Gonzalez</td>
+                <td>maria@mail.com</td>
+                <td>Propietario</td>
+                <td>
+                  <button class="btn btn--accent" style="padding: 0.25rem 0.5rem; font-size: 0.8rem; margin-right: 0.5rem;" aria-label="Editar usuario">Editar</button>
+                  <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.8rem; background-color: #EF4444;" aria-label="Eliminar usuario">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>15.666.777-8</td>
+                <td>Carlos Perez</td>
+                <td>carlos@mail.com</td>
+                <td>Gestor</td>
+                <td>
+                  <button class="btn btn--accent" style="padding: 0.25rem 0.5rem; font-size: 0.8rem; margin-right: 0.5rem;" aria-label="Editar usuario">Editar</button>
+                  <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.8rem; background-color: #EF4444;" aria-label="Eliminar usuario">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>19.888.999-0</td>
+                <td>Ana Silva</td>
+                <td>ana.s@mail.com</td>
+                <td>Propietario</td>
+                <td>
+                  <button class="btn btn--accent" style="padding: 0.25rem 0.5rem; font-size: 0.8rem; margin-right: 0.5rem;" aria-label="Editar usuario">Editar</button>
+                  <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.8rem; background-color: #EF4444;" aria-label="Eliminar usuario">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
