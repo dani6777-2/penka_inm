@@ -195,3 +195,42 @@ Debes entregar:
 
 * Código completo de TODOS los archivos HTML
 * Código completo de styles.css
+
+---
+
+## 2. Historial de Desarrollo y Prompts Sucesivos
+
+A continuación, se documenta el paso a paso ("historia") de la evolución del proyecto mediante los siguientes prompts:
+
+### Fase de Construcción
+**Prompt:** *"desarrollalo"*
+* **Acción realizada:** Se generaron y guardaron en el espacio de trabajo los 8 archivos principales del proyecto: `styles.css`, `index.html`, `registro-propietario.html`, `registro-gestor.html`, `login.html`, `dashboard.html`, `registro-propiedades.html` y `gestion-usuarios.html`. Todos ellos cumpliendo con la interfaz estricta de HTML y Flexbox/Grid CSS sin JS.
+
+### Creación de la Documentación Inicial
+**Prompt:** *"has un readme con el prompt que te pase"*
+* **Acción realizada:** Se creó este archivo `README.md` por primera vez conteniendo únicamente el prompt inicial del requerimiento universitario.
+
+### Modificación: Moneda en el Precio
+**Prompt:** *"cuando se registra una propiedad, el precio puede ser en CLP O UF"*
+* **Acción realizada:** Se modificó el archivo `registro-propiedades.html`. Se eliminaron los dos inputs separados de "Precio (CLP)" y "Precio (UF)" y se reemplazaron por un selector (`<select>`) de "Tipo de Moneda" (CLP / UF) acompañado de un único input para el precio, acoplando la lógica de negocio UI solicitada.
+
+### Modificación: Imágenes Estéticas
+**Prompt:** *"agrega url de imagenes publicas"*
+* **Acción realizada:** Se editaron las tarjetas de la página principal (`index.html`). Se reemplazaron todas las imágenes de placeholder (`via.placeholder.com`) por URLs de fotografías gratuitas reales extráidas de Unsplash (`images.unsplash.com`) para mejorar el visual.
+
+### Integración y Flujo CI/CD (GitHub Pages)
+**Prompt:** *"bien ahora publicalo en github, como repositorio publico y a demas usa github action para que quede disponible en la web"*
+* **Acción realizada:** Se creó el archivo de trabajo `.github/workflows/pages.yml` configurándolo para publicar el sitio automáticamente con *GitHub Pages* y permitir su alojamiento gratuito en línea, indicando vía terminal los comandos git push origin main básicos para enlazarse.
+
+### Resolución de Errores de Permisos (GitHub Actions)
+**Prompts:**
+> *Run actions/configure-pages@v5 ... Error: HttpError: Not Found*
+> *Error: Resource not accessible by integration*
+* **Acción realizada:** El error surgió porque los flujos de trabajo en el repo no tenían permisos automáticos de despliegue integrado, debido a la estructura de permisos predeterminada de las cuentas gratuitas de usuario. Se actualizó el YAML agregando `enablement: true`. Al arrojar error de permisos, se le comunicaron al usuario los pasos manuales críticos mediante la interfaz de usuario de GitHub:
+  1. Ir a **Settings > Pages**.
+  2. Cambiar "Source" a **GitHub Actions**.
+  3. Re-ejecutar el trabajo fallido desde la pestaña **Actions**.
+
+### Documentación Final
+**Prompt:** *"agrega todos los prompst y el historias al readme a forma de documentacion"*
+* **Acción realizada:** Se expandió este archivo `README.md` insertando esta amplia bitácora con los prompts cursados y las resoluciones técnicas.
